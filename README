@@ -1,1 +1,4 @@
 Avert your eyes
+
+
+bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip sample_node_app.zip 

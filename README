@@ -1,4 +1,10 @@
-Avert your eyes
+Node.js support on cloudbees
 
 
-bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip sample_node_app.zip 
+To use: 
+
+clone this repo
+cd example
+zip -r ../app.zip *
+
+bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip ../app.zip 

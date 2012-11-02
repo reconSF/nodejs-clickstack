@@ -4,7 +4,7 @@ Node.js support on cloudbees
 To use: 
 
 clone this repo
-cd example
+cd sampleapp
 zip -r ../app.zip *
 
 bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip ../app.zip 

@@ -1,5 +1,8 @@
 Node.js support on CloudBees. A Work In Progress.
 
+This should work with standard node.js apps, but as it is a WIP - please do ask any questions on
+https://groups.google.com/forum/#!forum/cloudbees-dev as we flesh it out.
+
 
 To use: 
 
@@ -12,7 +15,7 @@ bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaw
 You can see this running at node.playground.cloudbees.net
 
 Notes: 
-It looks for a main.js by default. 
-If a package.json is present, it will install the packages. 
+It looks for a main.js by default. You can set a config variable of "main_js" to override this.
+If a package.json is present, it will install the packages via npm.
 
 Node version 0.8.11 at present.

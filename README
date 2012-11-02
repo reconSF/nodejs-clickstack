@@ -1,4 +1,4 @@
-Node.js support on cloudbees
+Node.js support on CloudBees. A Work In Progress.
 
 
 To use: 
@@ -8,3 +8,11 @@ cd sampleapp
 zip -r ../app.zip *
 
 bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip ../app.zip 
+
+You can see this running at node.playground.cloudbees.net
+
+Notes: 
+It looks for a main.js by default. 
+If a package.json is present, it will install the packages. 
+
+Node version 0.8.11 at present.

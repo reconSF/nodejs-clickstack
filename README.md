@@ -19,7 +19,7 @@ to be packaged up as a zip.
 
 # Usage
 
-(assuming you aren't using the ClickStart)
+(assuming you aren't using the ClickStart here: [https://github.com/CloudBees-community/nodejs-clickstart])
 
 Get a sample app (eg sampleapp from this repo)
 cd sampleapp

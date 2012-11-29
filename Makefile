@@ -1,15 +1,6 @@
-#
-# Crude, but effective
+plugin_name = nodejs-plugin
+pkg_files = LICENCE setup node-v0.8.11-linux-x64.tar.gz
 
-build_dir = ./build
+include plugin.mk
 
-
-package: clean
-	mkdir -p build
-	chmod 755 setup
-	zip $(build_dir)/node-clickstack.zip setup node-*.tar.gz
-	echo "Now upload $(build_dir)/node-clickstack.zip"
-
-clean:
-	rm -rf $(build_dir)	
 

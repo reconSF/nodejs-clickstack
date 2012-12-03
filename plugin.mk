@@ -25,7 +25,10 @@ clean-pkg: plugin_name-var
 
 publish: plugin_name-var publish_key-var publish_secret-var pkg republish
 
-republish:
+republish:	
+	# Lets wake up the repository manager app
+	curl -I http://clickstack-repository.cloudbees.com/ 	
+	# Uploading to repository - this may take some time - URL to follow...
 	curl -F apikey=$(publish_key) -F apisecret=$(publish_secret) -F file=@$(plugin_name).zip https://clickstack-repository.cloudbees.com/upload
 	
 

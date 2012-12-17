@@ -25,7 +25,7 @@ Get a sample app (eg sampleapp from this repo)
 cd sampleapp
 zip -r ../app.zip *
 
-bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/cloudbees-downloads/clickstack/node-clickstack.zip ../app.zip 
+bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.8.16.zip ../app.zip 
 
 You can see this running at node.playground.cloudbees.net
 

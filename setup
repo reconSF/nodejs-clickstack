@@ -12,7 +12,7 @@ cat > "$control_dir/start" << EOF
 cd $app_dir
 export PATH=$app_dir/node/bin:\$PATH
 export PORT=$app_port
-export $(cat $app_dir/.genapp/control/env)
+while read line ; do export \$line ; done < $app_dir/.genapp/control/env
 
 
 exec node \${main_js-main.js}

@@ -3,7 +3,7 @@
 # Install everything from pkg_dir
 cp -a $pkg_dir/* $app_dir/
 
-node_version=node-v0.8.16-linux-x64
+node_version=node-v0.8.21-linux-x64
 
 
 # write the start control file:

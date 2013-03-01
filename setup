@@ -5,6 +5,8 @@ cp -a $pkg_dir/* $app_dir/
 
 node_version=node-v0.8.21-linux-x64
 
+# we want to export all config
+while read line ; do echo "export $line" >> $app_dir/.genapp/control/env_exports ; done < $app_dir/.genapp/control/env
 
 # write the start control file:
 cat > "$control_dir/start" << EOF
@@ -12,8 +14,7 @@ cat > "$control_dir/start" << EOF
 cd $app_dir
 export PATH=$app_dir/node/bin:\$PATH
 export PORT=$app_port
-while read line ; do export \$line ; done < $app_dir/.genapp/control/env
-
+. $app_dir/.genapp/control/env_exports
 
 exec node \${main_js-main.js}
 EOF

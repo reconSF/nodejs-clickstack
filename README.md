@@ -38,5 +38,9 @@ If a package.json is present, it will install the packages via npm.
 # Updating this stack
 
 For example: update the node.js binary in this repo.
-Run: make package
-Upload the resultant zip, use it.
+
+* fork this repo (maybe)
+* make publish
+
+This will make a zip of the stack, and push it to a repository via your cloudbees credentials. You then use the resulting URL in the SICKURL above.
+

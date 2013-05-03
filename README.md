@@ -1,7 +1,7 @@
 ## Node.js support on CloudBees.
 
 # ClickStacks and CloudBees
-This should work with standard node.js apps, but as it is a WIP - please do ask any questions on
+This should work with standard node.js apps packaged up of the zip of the application directory (the dir with the package.json in it) - please do ask any questions on
 https://groups.google.com/forum/#!forum/cloudbees-dev as we flesh it out.
 
 This repo is for people who want to extend/enhance support on CloudBees. Users of 
@@ -40,7 +40,9 @@ If a package.json is present, it will install the packages via npm.
 For example: update the node.js binary in this repo.
 
 * fork this repo (maybe)
+* update the node version in Makefile
 * make publish
 
-This will make a zip of the stack, and push it to a repository via your cloudbees credentials. You then use the resulting URL in the STACKURL above.
+This will make a zip of the stack, and push it to a repository via your cloudbees credentials. 
+You then use the resulting URL in the STACKURL above.
 

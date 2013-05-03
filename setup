@@ -3,7 +3,6 @@
 # Install everything from pkg_dir
 cp -a $pkg_dir/* $app_dir/
 
-node_version=node-v0.10.2-linux-x64
 
 # we want to export all config
 while read line ; do echo "export $line" >> $app_dir/.genapp/control/env_exports ; done < $app_dir/.genapp/control/env
@@ -25,9 +24,9 @@ chmod 755 "$control_dir/start"
 
 #set up local node.js version
 cd $app_dir
-tar xf $plugin_dir/$node_version.tar.gz
+tar xf $plugin_dir/node.tar.gz
 rm -rf node
-mv $node_version node
+mv node-v* node
 
 #install any packages if we need to
 if [ -e package.json ]

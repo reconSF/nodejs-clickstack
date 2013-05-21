@@ -25,7 +25,11 @@ Get a sample app (eg sampleapp from this repo)
 cd sampleapp
 zip -r ../app.zip *
 
-bees app:deploy -a playground/node -t node -RPLUGIN.SRC.node=STACKURL ../app.zip 
+bees app:deploy -t nodejs ../app.zip 
+
+That is it - you can also use your own ClickStack url, or a specific nodejs version via appending:
+
+-R PLUGIN.SRC.node=https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.10.5.zip
 
 STACKURL can be found (use the latest) from https://developer.cloudbees.com/bin/view/RUN/ClickStack
 

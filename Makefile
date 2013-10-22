@@ -1,4 +1,4 @@
-nodejs_ver =  0.10.5
+nodejs_ver =  0.10.21
 
 plugin_name = nodejs-plugin-$(nodejs_ver)
 pkg_files = LICENCE setup node.tar.gz

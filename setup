@@ -1,4 +1,5 @@
 # -*-shell-script-*-
+. "$genapp_functions/core"
 
 # Install everything from pkg_dir
 cp -a $pkg_dir/* $app_dir/
@@ -23,17 +24,27 @@ chmod 755 "$control_dir/start"
 
 
 #set up local node.js version
+_version=$(metadata node_version "0.10.21")
+echo "install node.js $_version"
+
 cd $app_dir
-tar xf $plugin_dir/node.tar.gz
+curl --output node.tar.gz --fail https://cb-s3-dist.s3.amazonaws.com/nodejs/node-v${_version}-linux-x64.tar.gz 
+if [ $? != 0 ]
+then
+    echo "unsupported nodejs version : $_version"
+    exit -1
+fi
+
+tar xf node.tar.gz
 rm -rf node
 mv node-v* node
+
 
 #install any packages if we need to
 if [ -e package.json ]
 then
  ./node/bin/npm install
 fi
-
 
 chmod -R g+w $app_dir
 

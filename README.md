@@ -19,6 +19,7 @@ getting the latest version of things.
 For example, to run this stack: 
 
 Clone this repo and run: 
+    
     bees app:deploy -t nodejs -R PLUGIN.SRC.nodejs=https://s3.amazonaws.com/clickstacks/admin/nodejs-clickstack.zip sampleapp.zip 
 
 (the sampleapp.zip is just a, um, sample app! Unzip to see the structure).
@@ -32,7 +33,7 @@ to be packaged up as a zip. Obvious the best way to do npm install is in a Jenki
 
 # Usage Example
 
-bees app:deploy -t nodejs sampleapp.zip 
+    bees app:deploy -t nodejs sampleapp.zip 
 
 That is it.
 You can see this running at node.playground.cloudbees.net
@@ -41,7 +42,7 @@ You can see this running at node.playground.cloudbees.net
 
 You can select the NodeJS version to be using by passing runtime parameter node.version
 
--R node.version=0.11.7 
+    -R node.version=0.11.7 
 
 # Notes
 It looks for a main.js by default. You can set a config variable of "main_js" to override this.

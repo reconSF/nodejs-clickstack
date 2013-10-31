@@ -4,22 +4,24 @@
 This should work with standard node.js apps packaged up of the zip of the application directory (the dir with the package.json in it) - please do ask any questions on
 https://groups.google.com/forum/#!forum/cloudbees-dev as we flesh it out.
 
-This repo is for people who want to extend/enhance support on CloudBees. Users of 
-node.js apps can simply fire up the node.js clickstart and be happy.
+If you want the quickest way to get going with node.js on cloudbees - fire up the clickstart:
+
+https://github.com/CloudBees-community/nodejs-clickstart
 
 If this is you, read on: 
 
-ClickStarts are used by specifying the application type when you deploy an app. 
+Stacks are specified when you deploy an app. 
+
 You can specify the stack to use either by name, or <name> and 
 -RPLUGIN.SRC.<name>=<url> - this is called a "remote" plugin and is useful for 
 getting the latest version of things.
 
 This stack uses npm to install any required packages, and expects applications 
-to be packaged up as a zip. 
+to be packaged up as a zip. Obvious the best way to do npm install is in a Jenkins job - which is what the ClickStart sets up for you.
 
 # Usage
 
-(assuming you aren't using the ClickStart here: https://github.com/CloudBees-community/nodejs-clickstart)
+
 
 Get a sample app (eg sampleapp from this repo)
 cd sampleapp

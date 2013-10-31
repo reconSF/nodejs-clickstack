@@ -27,13 +27,14 @@ zip -r ../app.zip *
 
 bees app:deploy -t nodejs ../app.zip 
 
-That is it - you can also use your own ClickStack url, or a specific nodejs version via appending:
-
--R PLUGIN.SRC.node=https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-0.10.5.zip
-
-STACKURL can be found (use the latest) from https://developer.cloudbees.com/bin/view/RUN/ClickStack
-
+That is it.
 You can see this running at node.playground.cloudbees.net
+
+# Version
+
+You can select the NodeJS version to be using by passing runtime parameter node.version
+
+-R node.version=0.11.7 
 
 # Notes
 It looks for a main.js by default. You can set a config variable of "main_js" to override this.
@@ -41,10 +42,8 @@ If a package.json is present, it will install the packages via npm.
 
 # Updating this stack
 
-For example: update the node.js binary in this repo.
-
 * fork this repo (maybe)
-* update the node version in Makefile
+* update ... what you need to update
 * make publish
 
 This will make a zip of the stack, and push it to a repository via your cloudbees credentials. 

@@ -46,7 +46,7 @@ You can select the NodeJS version to be using by passing runtime parameter node.
 
 # Notes
 It looks for a main.js by default. You can set a config variable of "main_js" to override this.
-If a package.json is present, it will install the packages via npm.
+If you have dependencies in your package.json - run npm install before you zip up your application for deployment.
 
 # Updating this stack
 
